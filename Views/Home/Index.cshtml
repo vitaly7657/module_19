@@ -1,0 +1,45 @@
+﻿@model TxtParse
+@{
+    ViewData["Title"] = "Телефонный справочник";
+}
+<head>
+    <title>Телефонный справочник</title>
+    <link href="~/css/stylecss.css" rel="stylesheet" />
+</head>
+<body>
+    <table border="1"
+           align="left"
+           cellpadding="10">
+        <tr>  <th>ID</th><th>Фамилия</th><th>Имя</th><th>Отчество</th>  </tr>
+
+        <tr>
+            <td><a href="Home/Detail1">@TxtParse.ArrayPerson(0,0)</a></td>
+            @{
+                for (int i = 1; i <= 3; i++)
+                {
+                    <td>@TxtParse.ArrayPerson(0,i)</td>
+                }
+            }
+        </tr>
+
+        <tr>
+            <td><a href="Home/Detail2">@TxtParse.ArrayPerson(1,0)</a></td>
+            @{
+                for (int i = 1; i <= 3; i++)
+                {
+                    <td>@TxtParse.ArrayPerson(1,i)</td>
+                }
+            }
+        </tr>
+
+        <tr>
+            <td><a href="Home/Detail3">@TxtParse.ArrayPerson(2,0)</a></td>
+            @{
+                for(int i = 1; i<=3; i++)
+                {
+                    <td>@TxtParse.ArrayPerson(2,i)</td>
+                }
+            }
+        </tr>
+    </table>
+</body>
